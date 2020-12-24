@@ -1,0 +1,314 @@
+/* CSS Document */
+body, h1, h2, h3, p, quote, small, form, input, ul, li, ol, label
+{
+    margin: 0px;
+    padding: 0px;
+}
+input{
+	font-size:15px;
+	text-align:center;
+}
+.inputtxt{
+	/* background-color:#4C98C7; */
+	background-color:white;
+	border:none;
+	outline:none;
+	cursor:pointer;
+}
+.inputbut{
+	width:100px;
+	height:30px;
+	background-color:#4C98C7;
+	border:none;
+	outline:none;
+	cursor:pointer;
+}s
+.search{
+/*	background-color: chartreuse;*/
+	width: 1500px;
+	height: 60px;
+	border: #4C98C7 thin dashed;
+}
+.search_type{
+	height: 60px;
+	display: inline-block;
+	vertical-align: top;
+	padding: 20px;
+/*	background-color: aqua;*/
+	border-right: #4C98C7 thin dashed;
+}
+.select_but{
+	background-color: darkorange;
+	border:hidden;
+	color: white;
+	margin-left: 30px;
+	padding: 10px;
+	width: 200px;
+}
+.cityinput{
+	height: 30px;
+	border: #4C98C7 thick thin;
+	display: inline-block;
+}
+.search_info{
+	height: 60px;
+	padding: 10px;
+	display: inline-block;
+/*	background-color: indianred;*/
+}
+.search_info ul li{
+	list-style-type: none;
+	float: left;
+	margin-left: 20px;
+}
+.head_logo{
+	width: 150px;
+	height: 74px;
+	vertical-align: bottom;
+	background-image: url(../images/12306.jpg);
+	background-size: 100% 100%;
+	display: inline-block;
+	margin-left: 200px;
+}
+.headticket{
+	width: 1000px;
+	height: 35px;
+	background-image: linear-gradient(to right, white,#E9E9E9);
+	
+	display: inline-block;
+	
+}
+.ticket_but{
+	float: right;
+	border: hidden;
+	cursor: pointer;
+	outline: none;
+	font: "fredericka-the-great";
+	background-color: transparent;
+	margin-left: 20px;
+}
+
+.head{
+	height: 74px;
+	width: 100%;
+/*	background-image: url(background.jpg);*/
+	
+}
+
+.guider{
+	width: 100%;
+	height: 40px;
+	background-color:#4C98C7;
+	margin: 0;
+	padding-left:130px;
+	align-content: center;
+	
+}
+.btns{
+
+	margin-left: 40px;
+	background-color:#4C98C7;
+	float: left;
+	list-style:none;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	line-height: 40px;
+	color: white;
+	display: inline-block;
+}
+.btns:hover{
+	color: white;
+	background-color: #4c98c7;
+	font-weight: bold;
+}
+.li_button{
+	border: hidden;
+	cursor: pointer;
+	outline: none;
+	font: "fredericka-the-great";
+	background-color: transparent;
+	margin-left: 20px;
+	color: white;
+	font-size: 15px;
+}
+.main{
+	width: 100%;
+	height: 560px;
+	padding-top: 60px;
+	padding-left: 40px;
+	background-image: url(../images/timg2.jpg);
+	background-size: 100% 100%;
+	
+}
+.ticket_select{
+	width: 640px;
+	height: 460px;
+	display: inline-block;
+	background-color: rgba(0,0,0,0.19);
+}
+.ticket_trans{
+	width: 640px;
+	height: 480px;
+	display: inline-block;
+	background-color: rgba(0,0,0,0.42);
+}
+.ticket_li{
+	list-style:none;
+	width:460px;
+	height: 30px;
+	margin-left: 20px;
+	margin-top: 60px;
+}
+.ticket_label{
+	margin-top: 20px;
+	width: 80px;
+	height: 30px;
+	font-size: 16px;
+	text-align: center;
+	color: white;
+	display: inline-block;
+}
+
+.input_but{
+	width: 400px;
+	background-color: #FF7301;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	color: white;
+}
+.foot{
+	width: 100%;
+	height: 150px;
+	background-color: blueviolet;
+}
+
+
+
+body
+{	background-color: white;
+    color: #3D445E;
+    font-family: Arial, Helvetica, sans-serif;
+	height: 800px;
+	width: 1860px;
+}
+
+p
+{
+    padding: 10px;
+    text-align: center;
+}
+
+#Page4{
+	position:absolute;
+	margin: 0px 0px 0px 0px;
+	width: 1560px;
+	height: 935px;
+	font-size: 22px;
+	background-color: white;
+}
+h3{
+	margin: 30px ;
+	color: gray;
+}
+hr{
+	height: 2px;
+}
+
+
+
+#webPage4{
+	margin-top: 20px;
+	width:1500px;
+}
+#webPage4>table{
+            font-size: 16px;
+            text-align: center;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 2px #000;
+	 		margin: 20px;
+        }
+
+        table thead tr,table tbody tr {
+            height: 50px;
+            line-height: 50px;
+			width:120px;
+            /*background-color: pink;*/
+        }
+        table tr th:first-child,table tr td:first-child {/*设置table左边边框*/
+            border-left: 2px solid #3d445e;
+			border-right: 2px solid #3d445e;
+        }
+        table tr th:first-child,table tr td:nth-child(2) {/*设置table右边边框*/
+         border-right: 2px solid #3d445e;
+	        }
+ 		table tr th:nth-child(2),table tr td:nth-child(3) {/*设置table右边边框*/
+            border-right: 2px solid #3d445e;
+	        }	
+		table tr th:nth-child(3),table tr td:nth-child(4) {/*设置table右边边框*/
+            border-right: 2px solid #3d445e;
+			
+        }	
+ 		 table tr th:last-child,table tr td:last-child {/*设置table右边边框*/
+            border-right: 2px solid #3d445e;
+			
+        }
+		table tr th:nth-child(4),table tr td:nth-child(5) {/*设置table右边边框*/
+            border-right: 2px solid #3d445e;
+			
+        }
+		table tr th:nth-child(5),table tr td:nth-child(6) {/*设置table右边边框*/
+           border-right: 2px solid #3d445e;
+			
+        }	
+		table tr th:nth-child(6),table tr td:nth-child(7) {/*设置table右边边框*/
+            border-right: 2px solid #3d445e;
+			
+        }
+
+        table tr th:nth-child(7),table tr td:last-child {/*设置table右边边框*/
+            border-right: 2px solid #3d445e;
+			
+        }
+        table tr td:first-child,
+        table tr td:nth-child(2),
+        table tr td:nth-child(3),
+		table tr td:nth-child(4),
+		table tr td:nth-child(5),
+		table tr td:nth-child(6),
+		table tr td:nth-child(7),
+        table tr td:last-child{/*设置table表格每列底部边框*/
+            border-bottom: 2px solid #3d445e;
+          
+        }
+        /*table tr:last-child td:first-child,
+        table tr:last-child td:nth-child(2),
+        table tr:last-child td:nth-child(3),
+        table tr:last-child td:last-child{/!*设置table表格最后一列底部边框*!/
+            border-bottom: 2px solid #000;
+        }*/
+        table tr th {
+            color: white;
+			background-color: #3d445e;
+        }
+        table tr:first-child th:first-child {
+            border-top-left-radius: 12px;
+        }
+
+        table tr:first-child th:last-child {
+            border-top-right-radius: 12px;
+        }
+        table tr:last-child td:first-child {
+            border-bottom-left-radius: 12px;
+        }
+
+        table tr:last-child td:last-child {
+            border-bottom-right-radius: 12px;
+        }
+
+#conall{
+	width: 1860px;
+	height: 935px;	
+}

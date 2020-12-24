@@ -1,0 +1,41 @@
+/* CSS Document */
+body{
+	width: 100%;height: 100%;
+	background-image: url(../images/timg2.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% ;
+}
+#launch{
+	position: absolute;
+	background-color:#505C78; 
+	border: 2px dotted #272A65;
+	left: 35%;
+	right: 35%;
+	top: 200px;
+	height: 380px;
+	background-size: 200px 200px;
+	background-color: rgba(0,0,0,0.2);
+}
+h3{
+	color: dimgray;
+	font-size: 25px;
+	margin-left: 40%;
+}
+hr{
+	height: 5px;
+}
+#name,#password,#but{
+	height: 60px;
+	margin-left: 10%;
+	margin-top: 10px;
+}
+#name,#but{
+	margin-top: 20px;
+}
+#but{
+	color: aliceblue;
+}
+.choice{
+
+margin-left:50px;
+}

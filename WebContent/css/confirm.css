@@ -1,0 +1,308 @@
+/* CSS Document */
+
+body{
+	width:1480px;
+	margin: 0;
+	padding: 0;
+}
+.taker_input{
+	height:30px;
+	font-size:16px;
+	width:100px;
+}
+.taker_input2{
+	
+	height:30px;
+	font-size:16px;
+	width:50px;
+
+}
+.tanchuinput{
+	text-align: center;
+	width: 200px;
+	height: 50px;
+}
+.dialog_confirm{
+}
+.head_logo{
+	width: 150px;
+	height: 90px;
+	vertical-align: bottom;
+	background-image: url(../images/12306.jpg);
+	background-size: 100% 100%;
+	display: inline-block;
+	margin-left: 200px;
+}
+.headticket{
+	width: 1000px;
+	height: 35px;
+	background-image: linear-gradient(to right, white,#E9E9E9);
+	
+	display: inline-block;
+	
+}
+.button_taker{
+	width:100px;
+	height:40px;
+	border: hidden;
+	cursor: pointer;
+	outline: none;
+	font-size:16px;
+	color:white;
+	font: "fredericka-the-great";
+	background-color:#4C98C7 ;
+	margin-left: 20px;
+	
+}
+.ticket_but{
+	float: right;
+	border: hidden;
+	cursor: pointer;
+	outline: none;
+	font: "fredericka-the-great";
+	background-color: transparent;
+	margin-left: 20px;
+}
+
+.head{
+	height: 74px;
+	width: 100%;
+	
+/*	background-image: url(background.jpg);*/
+	
+}
+
+.guider{
+	width: 100%;
+	height: 40px;
+	background-color:#4C98C7;
+	margin: 0;
+	align-content: center;
+	
+}
+.btns{
+
+	margin-left: 180px;
+	background-color:#4C98C7;
+	float: left;
+	list-style:none;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	line-height: 40px;
+	color: white;
+	display: inline-block;
+}
+.btns:hover{
+	color: white;
+	background-color: #4c98c7;
+	font-weight: bold;
+}
+.li_button{
+	border: hidden;
+	cursor: pointer;
+	outline: none;
+	font: "fredericka-the-great";
+	background-color: transparent;
+	margin-left: 20px;
+	color: white;
+	font-size: 15px;
+}
+.main{
+	width: 100%;
+	height: 560px;
+	padding-top: 60px;
+	padding-left: 40px; 
+	background-color: whitesmoke;
+	background-size: 100% 100%;
+	
+}
+.traininfo{
+	width: 1000px;
+	margin-left: 230px;
+	margin-right: 230px;
+	margin-top: 30px;
+	border-radius:30px;
+	border-color: aquamarine;
+	border: dotted thin;
+}
+.tain_info_head{
+	color: white;
+	height: 100%;
+	width: 980px;
+	display: inline-block;
+	
+	border-top-left-radius:30px;
+	border-top-right-radius:30px;
+	padding-left: 20px;
+	background-color: #4C98C7;
+	border-bottom: dotted #90B0C0 thin;
+}
+.train_info_main{
+	padding-left: 20px;
+	
+	border-bottom: dotted #90B0C0 thin;
+}
+.train_info_input{
+	font-size: 15px;
+	border: none;
+	height: 30px;
+	width: 200px;
+	background-color: whitesmoke;
+}
+.train_ticket{
+	padding-left:  30px;
+	
+}
+.taker_info{
+	width: 1000px;
+	margin-left: 230px;
+	margin-right: 230px;
+	margin-top: 30px;
+	border-radius:30px;
+	border-color: aquamarine;
+	border: dotted thin;
+}
+.taker_info_head{
+	margin-left: 30px;
+	vertical-align: bottom;
+	font-size: 13px;
+	color: dimgray;
+	margin-right: 30px;
+	border-bottom: gray thin dotted;
+}
+
+.taker_info_main{
+	width: 990px;
+	padding:10px;
+}
+.taker_head1{
+	font-size:16px;
+	border-bottom: #DED8D8 thin dotted;
+}
+.taker_head2{
+	margin-top: 10px;
+	
+	margin-bottom: 10px;
+}
+.taker_info_submit{
+	margin-top:20px;
+	width: 360px;
+	height: 60px;
+}
+.submit_button{
+	border-radius: 30px;
+	margin-left: 300px;
+	height: 40px;
+	background-color: #F18433;
+	border: none;
+	outline: none;
+	color: white;
+	width: 100%;
+}
+#webPage4>table{
+			
+            font-size: 16px;
+            text-align: center;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 2px #000;
+	 		margin: 20px;
+	
+        }
+
+        table thead tr,table tbody tr {
+            height: 50px;
+            line-height: 50px;
+			
+            /*background-color: pink;*/
+        }
+        table tr th:first-child,table tr td:first-child {/*设置table左边边框*/
+            border-left: 2px solid gray;
+			border-right: 2px solid gray;
+        }
+        table tr th:first-child,table tr td:nth-child(2) {/*设置table右边边框*/
+         border-right: 2px solid gray;
+	        }
+ 		table tr th:nth-child(2),table tr td:nth-child(3) {/*设置table右边边框*/
+            border-right: 2px solid gray;
+	        }	
+		table tr th:nth-child(3),table tr td:nth-child(4) {/*设置table右边边框*/
+            border-right: 2px solid gray;
+			
+        }	
+ 		 table tr th:last-child,table tr td:last-child {/*设置table右边边框*/
+            border-right: 2px solid gray;
+			
+        }
+		table tr th:nth-child(4),table tr td:nth-child(5) {/*设置table右边边框*/
+            border-right: 2px solid gray;
+			
+        }
+		table tr th:nth-child(5),table tr td:nth-child(6) {/*设置table右边边框*/
+           border-right: 2px solid gray;
+			
+        }	
+		table tr th:nth-child(6),table tr td:nth-child(7) {/*设置table右边边框*/
+            border-right: 2px solid gray;
+			
+        }
+		table tr th:nth-child(7),table tr td:nth-child(8) {/*设置table右边边框*/
+            border-right: 2px solid gray;
+			
+        }
+        table tr th:nth-child(8),table tr td:nth-child(9) {/*设置table右边边框*/
+            border-right: 2px solid gray;
+			
+        }
+        table tr th:nth-child(9),table tr td:nth-child(10) {/*设置table右边边框*/
+            border-right: 2px solid gray;
+			
+        }
+        table tr th:nth-child(10),table tr td:nth-child(11) {/*设置table右边边框*/
+            border-right: 2px solid gray;
+			
+        }
+        table tr th:nth-child(11),table tr td:last-child {/*设置table右边边框*/
+            border-right: 2px solid gray;
+			
+        }
+        
+        table tr td:first-child,
+        table tr td:nth-child(2),
+        table tr td:nth-child(3),
+		table tr td:nth-child(4),
+		table tr td:nth-child(5),
+		table tr td:nth-child(6),
+		table tr td:nth-child(7),
+		table tr td:nth-child(8),
+		table tr td:nth-child(9),
+		table tr td:nth-child(10),
+		table tr td:nth-child(11),
+        table tr td:last-child{/*设置table表格每列底部边框*/
+            border-bottom: 2px solid gray;
+        }
+        /*table tr:last-child td:first-child,
+        table tr:last-child td:nth-child(2),
+        table tr:last-child td:nth-child(3),
+        table tr:last-child td:last-child{/!*设置table表格最后一列底部边框*!/
+            border-bottom: 2px solid #000;
+        }*/
+        table tr th {
+            color: white;
+			background-color: gray;
+        }
+        table tr:first-child th:first-child {
+            border-top-left-radius: 12px;
+        }
+
+        table tr:first-child th:last-child {
+            border-top-right-radius: 12px;
+        }
+        table tr:last-child td:first-child {
+            border-bottom-left-radius: 12px;
+        }
+
+        table tr:last-child td:last-child {
+            border-bottom-right-radius: 12px;
+        }

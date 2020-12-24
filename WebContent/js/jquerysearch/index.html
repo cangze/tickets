@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>简单JS实现分页</title>
+    <style>
+        table {
+            width: 400px;
+            border: 1px solid #000;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+        tr,td,th {
+            border: 1px solid #000;
+            text-align: center;
+            height: 23px;
+        }
+        
+        input {
+            width: 60px;
+        }
+        
+        .search {
+            width: 600px;
+            margin: 20px auto;
+        }
+        .asc{
+            display: inline-block;
+            font-size: 10px;
+            cursor: pointer;
+            padding-left: 10px;
+        }
+        .desc{
+            display: inline-block;
+            font-size: 10px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        ol{
+            list-style: none;
+            text-align: center;
+            position: absolute;
+            margin: 0;
+            top: 220px;
+            width: 400px;
+            margin-left: -200px;
+            left: 50%;
+        }
+        ol li{
+            cursor: pointer;
+            line-height: 30px;
+            height: 30px;
+            float: left;
+            margin-left: 6px;
+            border: 1px solid #ccc;
+            color: #09f;
+        }
+        ol li:nth-child(1){
+            margin-left: 0;
+        }
+        ol li p{
+            display: inline-block;
+            
+            cursor: pointer;
+            padding:0 8px;
+            margin: 0 2px;
+        }
+        #pagenum{
+            border:0;
+        }
+        .countIndex{
+            background: #09f;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="search">
+        按照价格查询: <input type="text" class="start"> - <input type="text" class="end">  按照商品名称查询: <input type="text" class="product"> <button class="search-pro">查询</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>产品名称</th>
+                <th>价格<span class="asc">↑</span><span class="desc">↓</span></th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <ol id="page">
+        <li id="home">首页</li>
+        <li id="last">上一页</li>
+        <li id="pagenum"></li>
+        <li id="next">下一页</li>
+        <li id="end">尾页</li>
+    </ol>
+    <script src="js/search.js"></script>
+</body>
+</html>

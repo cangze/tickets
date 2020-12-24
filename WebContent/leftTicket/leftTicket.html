@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>用户页面</title>
+    <link rel="stylesheet" type="text/css" href="../css/leftTicket.css" />
+	<link rel="stylesheet" type="text/css" href="../css/cityselect.css"/>
+	<script type="text/javascript">
+		function submitFun(){
+			var td=document.getElementById("dd");
+			td.innerHTML="16:53-12:22";
+			document.myFrom.action="../servlet/Buy"
+			document.myFrom.submit();
+		}
+		function Page1(){
+			window.location.href="../index.html";
+//		window.location.href="http://blog.sina.com.cn/mleavs";
+		}
+		var req = new XMLHttpRequest();
+		function queryInfos() {
+        	//设置传送方式，对应的servlet或action路径，是否异步处理
+			req.open("POST", "../Servlet/S_select", true);
+        	//如果设置数据传送方式为post，则必须设置请求头信息
+			req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        	//设置回调函数，当前操作完成后进行的操作
+			req.onreadystatechange = callback;
+
+        	//Ajax请求发送的数据不是表单，需要拼接数据，格式和get方式一样
+			var reqData = "start_station" + document.getElementById("citySelect1").value;
+			reqData += "&arrive_station" + document.getElementById("citySelect2").value;
+			reqData += "&time=" + document.getElementById("citySelect3").value;
+	        //发送请求
+        	req.send(reqData);
+		  }
+	</script>
+</head>
+  <body>
+	  
+	  <div class="head" >
+		<!--设置背景图片-->
+		<div class="head_logo">
+		<!--这是logo-->
+		</div>
+		<div class="headticket">
+			<!--这是我的车票按钮-->
+			<button class="ticket_but" style="width: 80px;height: 30px;">退出</button>
+			<button class="ticket_but" style="width: 80px;height: 30px;">用户名</button>
+			<button class="ticket_but" style="width: 80px;height: 30px; color: blue"> 我的车票</button>
+			
+		</div>		
+	</div>
+	<div class="guider">
+		<ul>
+			<!--用jQuery实现页面的切换-->
+			<li class="btns"><button class="li_button" onClick="Page1()">回到首页</button></li>
+		</ul>
+	</div>
+	  
+	  
+	<div class="search">
+		<div class="search_type">
+		 <input type="radio" name="search_type">单程
+		 <input type="radio" name="search_type">往返
+		</div>
+		<div class="search_info">
+			<form action="../Servlet/S_select" method="post" name="ticketsform" class="info_form">
+			<ul>
+			<li class="info_start">
+				<p class="info_table" style="display: inline-block">出发地</p>
+				<input type="text" class="cityinput" id="citySelect1" name="start_station" placeholder="请输入出发地">
+			</li>
+			<li class="info_start">
+				<p class="info_table" style="display: inline-block">目的地</p>
+				<input type="text" class="cityinput" id="citySelect2" name="arrive_station" placeholder="请输入目的地">
+			</li>
+			<script type="text/javascript" src="../js/cityselect.js"></script>
+			<script type="text/javascript">
+				var test=new Vcity.CitySelector({input:'citySelect1'});
+				var test=new Vcity.CitySelector({input:'citySelect2'});
+			</script>
+			<li class="info_start">
+				<p class="info_table"  style="display: inline-block">出发日期</p>
+				<input class="cityinput" type="date" name="start_time" >
+			</li>
+			<li class="info_start">
+				<input type="button" onclick="sub_tickets()" class="select_but" value="查询"></li>
+			</ul>
+			</form>
+		
+		</div>
+		 
+	</div>
+	<div id="webPage4">
+		 <h3>start_station--arrive_station</h3>
+		<hr>
+   		<table class="table" width="1450px" cellspacing="0" cellpadding="0">
+        <thead class="table_head">
+        <tr>
+            <th width="320px">车次</th>
+            <th width="320px">出发站-到达站</th>
+            <th width="320px">出发时间-到达时间</th>
+			<th width="320px">历时</th>
+			<th width="320px">商务座</th>
+			<th width="320px">一等座</th>
+			<th width="320px">二等座</th>
+			<th width="320px">购买</th>
+        </tr>
+        </thead>
+        <tbody>
+			<from name="myForm" method="post">
+			<tr>
+            <td><input type="text" value="pro.getCategory()" disabled></td>
+            <td><input type="text" value="pro.getCategory()" disabled></td>
+            <td><p id="dd">pro.getCategory()</p></td>
+            <td>pro.getCategory()</td>
+			<td>pro.getCategory()</td>
+			<td>pro.getCategory()</td>
+			<td>pro.getCategory()</td>
+			<td><button onClick="submitFun()">购买</button></td>	
+			</tr>
+			</from>
+        </tbody>
+    	</table> 
+	</div>
+	
+
+	</body>
+</html>
+		

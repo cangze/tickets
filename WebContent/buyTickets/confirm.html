@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>确认订单</title>
+<link rel="stylesheet" type="text/css" href="../css/confirm.css">
+  <link rel="stylesheet" href="../jquery-ui-1.12.1/jquery-ui.css">
+  <script src="../jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+  <script src="../jquery-ui-1.12.1/jquery-ui.js"></script>
+
+
+
+<script type="text/javascript">
+var counttt=1;
+var opt={
+		autoOpen: false,
+    	/* show: {
+    		effect: "blind",
+    		duration: 1000
+    		},
+    	hide: {
+    		effect: "explode",
+    		duration: 1000
+    		}, */
+        resizable: false,
+        height: "auto",
+        width: 500,
+        modal: true,
+        buttons: {
+            "确认添加": function() {
+           
+            //这里可以加入一些操作
+            //给下面的赋值
+             var taker_name=$("#takername").val();
+             var taker_idcard=$("#takeridcard").val();
+             var takertel=$("#takertel").val();
+             //判断是否与上面的相同
+             if(taker_name.length<=0||taker_idcard.length<=0||takertel.length<=0){
+                  alert("输入完整信息");
+             }
+             else{
+              $("#buy_detail").append('<tr><td>'+counttt+'</td>'
+     							+'<td><select id="ticket_type'+counttt+'"><option value="成人票">成人票</option>'
+     							+'<option value="学生票">学生票</option></select></td>'
+     							+'<td><select id="seat_type'+counttt+'"><option value="二等座">二等座</option><option value="一等座">一等座</option><option value="商务座">商务座</option>'
+     							+'</select></td>'
+     							+'<td><input id="taker_name'+counttt+'"type="text" value="'+taker_name+'"disabled></td>'
+     							+'<td><input id="taker_idcard'+counttt+'"type="text" value="'+taker_idcard+'" disabled></td>'
+     							+'<td><input id="taker_takertel'+counttt+'"type="text" value="'+takertel+'" disabled></td>'
+     							+'</tr>'); 
+             $("#takername").val("");
+             $("#takeridcard").val("");
+             $("#takertel").val("");
+             counttt++;
+             }
+             $(this).dialog("close");
+             },
+              "取消": function() {
+            	  $("#takername").val(0);
+                  $("#takeridcard").val(0);
+                  $("#takertel").val(0);
+                  $(this).dialog("close");
+              }
+       }   	
+}
+
+$(document).ready(function (){
+	
+    /*     $("#dialog_confirm").dialog(opt); */
+		$("#button_taker").click(function(e){
+			$("#dialog_confirm").dialog(opt);
+			$("#dialog_confirm").dialog("open");
+		
+		});
+    	
+  	});        
+       
+  
+	function Page1(){
+			window.location.href="../index.html";
+//		window.location.href="http://blog.sina.com.cn/mleavs";
+	}
+
+//	}
+</script>
+</head>
+
+<body>
+		<!--设置背景图片-->
+		<div class="head_logo">
+			<!--这是logo-->
+		</div>
+		<div class="headticket">
+			<!--这是我的车票按钮-->
+			<button class="ticket_but" style="width: 80px; height: 30px;">退出</button>
+			<button class="ticket_but" style="width: 80px; height: 30px;">用户名</button>
+			<button class="ticket_but"
+				style="width: 80px; height: 30px; color: blue">我的车票</button>
+
+		</div>
+	<div class="guider">
+		<ul>
+			<!--用jQuery实现页面的切换-->
+			<li class="btns"><button class="li_button" onClick="Page1()">回到首页</button></li>
+		</ul>
+	</div>
+	
+		<div id="dialog_confirm" style="display: none">
+		
+		<p style="width: 100px; display: inline-block">乘客名</p>
+		<input style="width: 400px;" class="tanchuinput" id="takername"
+			type="text" placeholder="请输入乘客名"> 
+		<br>
+		<p style="width: 100px; display: inline-block">乘客证件号码</p>
+		<input style="width: 400px;" class="tanchuinput" id="takeridcard"
+			type="text" placeholder="请输入正确的证件号码">
+		<br>
+		<p style="width: 100px; display: inline-block">乘客手机号</p>
+		<input style="width: 400px;" class="tanchuinput" id="takertel"
+			type="text" placeholder="请输入手机号"> <br></br>
+		
+		</div>
+		<div class="main">
+			
+			<div class="traininfo">
+				<div class="tain_info_head">
+					<p>列车信息（以下余票信息仅供参考）</p>
+				</div>
+				<div class="train_info_main">
+					<input class="train_info_input" type="text" disabled
+						value="date(week)"> <input class="train_info_input"
+						type="text" disabled value="train_name"> <input
+						class="train_info_input" type="text" disabled
+						value="start_station"> <input class="train_info_input"
+						type="text" disabled value="(start_time)">
+					<p style="display: inline-block">-</p>
+					<input class="train_info_input" type="text" disabled
+						value="arrive_station"> <input class="train_info_input"
+						type="text" disabled value="(arrive_time)">
+				</div>
+				<div class="train_ticket">
+					<!--显示所有有票的座次-->
+					<p style="display: inline-block; margin-left: 30px;">商务座(价格)
+						$(tickets_left)张票</p>
+					<p style="display: inline-block; margin-left: 30px">一等座(价格)
+						$(tickets_left)张票</p>
+					<p style="display: inline-block; margin-left: 30px">二等座(价格)
+						$(tickets_left)张票</p>
+				</div>
+			</div>
+			<div class="taker_info">
+
+				<div class="tain_info_head">
+					<p>乘客信息</p>
+				</div>
+				<div class="taker_info_head">
+					<div class="taker_head1">
+						<img src="../images/background.jpg" width="30px">
+						<p style="display: inline-block">乘车人:</p>
+						<button class="button_taker" id="button_taker">添加乘车人</button>
+					</div>
+					<!-- <div class="taker_head2">
+						<input class="taker_info_input" name="taker_form" type="checkbox"
+							value="taker_id">董冰清 <input class="taker_info_input"
+							name="taker_form" type="checkbox" value="taker_id">张玉洁
+					</div> -->
+				</div>
+				<div class="taker_info_main" id="webPage4">
+				<form>
+					<table>
+						<thead>
+							<tr>
+								<th style="width: 320px">序号</th>
+								<th style="width: 320px">票种</th>
+								<th style="width: 320px">席别</th>
+								<th style="width: 320px">姓名</th>
+								<th style="width: 320px">身份证号</th>
+								<th style="width: 320px">手机号</th>
+							</tr>
+						</thead>
+						<tbody id="buy_detail">
+							<!-- <tr> -->
+								<!-- <td>1</td>
+								<td><select id="ticket_type">
+										<option value="成人票">成人票</option>
+										<option value="学生票">学生票</option>
+								</select></td>
+								<td><select id="seat_type">
+										<option value="二等座">二等座</option>
+										<option value="一等座">一等座</option>
+										<option value="商务座">商务座</option>
+								</select></td>
+								<td><input type="text" value="" disabled></td>
+								<td><input type="text" value="" disabled></td>
+								<td><input type="text" value="" disabled></td> -->
+							<!-- </tr> -->
+						</tbody>
+					</table>
+				</form>
+				</div>
+				<div class="taker_info_submit">
+					<input class="submit_button" type="button" onClick="buy()"
+						value="购买">
+				</div>
+
+			</div>
+		</div>
+		
+	
+</body>
+</html>

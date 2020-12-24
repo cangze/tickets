@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>用户页面</title>
+    <link rel="stylesheet" type="text/css" href="../css/css.css" />
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+<!--	<script type="text/javascript" src="../js/search.js"></script>-->
+<!--	<script src="js.js" charset="UTF-8"></script>-->
+<!--	<script type="text/javascript" src="../MyUser/js/JQuery.js"></script>-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+			var count=1;
+            $('li.button a').click(function (e) {
+                var dropDown = $(this).parent().next();
+                $('.dropdown').not(dropDown).slideUp('slow');
+                dropDown.slideToggle('slow');
+                e.preventDefault();
+            });
+			$("#btn_van").click(function() {
+				localStorage.count=count;
+				$("#van_info tbody").append('<tr><td>'+localStorage.count+'</td>'
+											+'<td><input type="text" value="" placeholder="车厢类型"></td>'
+											+'<td><input type="text" value="" placeholder="行数"></td>'
+											+'<td><input type="text" value="" placeholder="座位总数"></td>'
+											+'<td></td></tr>');
+				count++;
+			});	
+			$("#but_custom").click(function() {
+				$("#train_info tbody").append('<tr>'
+											+'<td><input type="text" value="" placeholder="用户名"></td>'
+											+'<td><input type="text" value="" placeholder="密码"></td>'
+											+'<td><input type="text" value="" placeholder="身份"></td>'
+											+'<td></td></tr>');
+				count++;
+			});	
+        });
+	
+     	function changeToEdit1(){
+			$('#text3').attr("disabled","");
+			$('#text4').attr("disabled","");
+				
+		}
+		function static_num() {            
+			document.getElementById("btnOperate").onclick = function () {                
+        var arr = new Array();                
+        var items = document.getElementsByName("idd");                 
+        for (i = 0; i < items.length; i++) {                    
+            if (items[i].checked) {                        
+                arr.push(items[i].value);                    
+            }                
+        }                 
+        alert("选择的个数为：" + arr.length);            
+    };        
+};    
+		function changeToUnEdit1(){
+			$('#text3').attr("disabled","disabled");
+			$('#text4').attr("disabled","disabled");
+				
+		}
+		function add(){
+			
+		}
+		function changeColor1(){
+			document.getElementById("im1").style.borderColor="orange";
+			
+		}
+		function UnchangeColor1(){
+			document.getElementById("im1").style.borderColor="#E0E0E0";
+		}
+		function changeColor2(){
+			document.getElementById("im2").style.borderColor="orange";
+			
+		}
+		function UnchangeColor2(){
+			document.getElementById("im2").style.borderColor="#E0E0E0";
+		}
+		function webPage1(){
+			var div=document.getElementById("webPage1");
+			div.style.display="";
+			var div2=document.getElementById("webPage2");
+			div2.style.display="none";
+			var div3=document.getElementById("webPage3");
+			div3.style.display="none";
+			var div4=document.getElementById("webPage4");
+			div4.style.display="none";
+		}
+		function webPage2(){
+			var div=document.getElementById("webPage1");
+			div.style.display="none";
+			var div2=document.getElementById("webPage2");
+			div2.style.display="block";
+			var div3=document.getElementById("webPage3");
+			div3.style.display="none";
+			var div4=document.getElementById("webPage4");
+			div4.style.display="none";
+		}
+		function webPage3(){
+			var div=document.getElementById("webPage1");
+			div.style.display="none";
+			var div3=document.getElementById("webPage2");
+			div3.style.display="none";
+			var div2=document.getElementById("webPage3");
+			div2.style.display="block";
+			var div4=document.getElementById("webPage4");
+			div4.style.display="none";
+		}
+		function webPage4(){
+			var div=document.getElementById("webPage1");
+			div.style.display="none";
+			var div2=document.getElementById("webPage2");
+			div2.style.display="none";
+			var div3=document.getElementById("webPage3");
+			div3.style.display="none";
+			var div4=document.getElementById("webPage4");
+			div4.style.display="";
+		}
+		</script>
+		</head>
+<body style="text-align:center">
+	<div id="conall">
+    <div id="main">
+        <ul class="">
+			<li class="menu"> 
+				<ul>
+					  <li class="button"><a href="#" id="men" class="green">菜单<span></span></a></li>
+				</ul>
+			</li>
+            <li class="menu">
+                <ul>
+                    <li class="button"><a href="#" id="men" class="green">列车信息管理<span></span></a></li>
+                    <li class="dropdown">
+                        <ul>
+							<li><a href="javascript:void(0)" id="men" onclick="webPage1()">查看余票</a></li>
+                            <li><a href="javascript:void(0)" id="men" onclick="webPage2()" >增加列车</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu">
+                <ul>
+                    <li class="button"><a href="#" id="men" class="orange">用户信息管理<span></span></a></li>
+                    <li class="dropdown">
+                        <ul>
+							<li><a href="javascript:void(0)" id="men" onclick="webPage3()">添加管理员</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+	<div id="Page" style="display:" >
+		<!--webPage1:查看余票信息
+			webPage2:增加一趟列车
+			webPage3:添加管理员
+		-->
+		<div id="webPage1" style="display:none">
+		<h3>查看余票信息</h3>
+		<hr>
+		<table class="table" cellspacing="0" cellpadding="0">
+        <thead class="table_head">
+        <tr>
+            <th width="180px">车次</th>
+            <th width="180px">起始站</th>
+            <th width="180px">终点站</th>
+			<th width="180px">商务座</th>
+			<th width="180px">一等座</th>
+			<th width="180px">二等座</th>
+        </tr>
+        </thead>
+        <tbody>
+			
+			<tr>
+				<td>Trainname</td>
+				<td>startstation</td>
+				<td>arrivestation</td>
+				<td>lefttickets</td>
+				<td>lefttickets</td>
+				<td>lefttickets</td>
+			</tr>
+			<tr>
+				<td>Trainname</td>
+				<td>startstation</td>
+				<td>arrivestation</td>
+				<td>lefttickets</td>
+				<td>lefttickets</td>
+				<td>lefttickets</td>
+			</tr>
+	    </tbody>
+    	</table>
+		
+		</div>
+		<form action="servlet/newtrain" method="post">
+		<div id="webPage2" style="display: none">
+		<h3>添加列车信息</h3>
+		<hr>
+   		<table class="table" cellspacing="0" cellpadding="0">
+        <thead class="table_head">
+        <tr>
+            <th width="250px">Trainname</th>
+            <th width="250px">start_station</th>
+			<th width="250px">start_date</th>
+			<th width="250px">start_time</th>
+			<th width="250px">arrive_station</th>
+			<th width="250px">arrive_date</th>
+			<th width="250px">arrive_time</th>
+        </tr>
+        </thead>
+        <tbody id="train_info">
+			<tr>
+            <td><input type="text" value="" placeholder="列车车次"></td>
+            <td><input type="text" value="" placeholder="起始站点"> </td>
+			<td><input type="text" value="" placeholder="起始日期"> </td>
+			<td><input type="text" value="" placeholder="起始时间"> </td>
+            <td><input type="text" value="" placeholder="终点站"></td>
+			<td><input type="text" value="" placeholder="到达日期"></td>
+			<td><input type="text" value="" placeholder="到达时间"></td>
+        </tr>
+        </tbody>
+  		 </table>
+		<hr>
+			
+		<table class="table" id="van_info" cellspacing="0" cellpadding="0">
+        <thead class="table_head" >
+        <tr>
+            <th width="250px">Van_id</th>
+            <th width="250px">van_type</th>
+			<th width="250px">van_row</th>
+			<th width="250px">seat_sum</th>
+			<th width="250px"><input type="button" id="btn_van" value="新增"></th>
+        </tr>
+        </thead>
+        <tbody id="van_info_tbody" >
+
+        </tbody>
+  		</table>
+		<input type="submit" value="提交">
+		</div>
+		</form>
+		
+		<form action="" method="post">
+		<div id="webPage3" style="display:none " >
+		<h3>添加管理员</h3>
+		<hr>
+   		<table class="table" id="train_info" cellspacing="0" cellpadding="0">
+        <thead class="table_head">
+        <tr>
+            <th width="250px">用户名</th>
+            <th width="250px">密码</th>
+			<th width="250px">身份</th>
+			<th width="250px"><input type="button" id="but_custom" value="新增"></th>
+        </tr>
+        </thead>
+        <tbody>
+			<tr>
+            <td><input type="text" value="" placeholder="用户名"></td>
+            <td><input type="text" value="" placeholder="密码"> </td>
+			<td><input type="text" value="" placeholder="身份"> </td>
+ 	        </tr>
+        </tbody>
+  		 </table>
+		<input type="submit" value="提交">
+		 </div>
+		</form>
+		
+		
+		</div>
+	</div>
+
+		</body>
+	</html>
+		

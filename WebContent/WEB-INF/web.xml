@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Tickets</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+    <servlet>
+  	<servlet-name>Launch</servlet-name>
+  	<servlet-class>Servlet.S_Launch</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Launch</servlet-name>
+  	<url-pattern>/Servlet/S_Launch</url-pattern>
+  	  </servlet-mapping>
+  	  
+  	      <servlet>
+  	<servlet-name>select</servlet-name>
+  	<servlet-class>Servlet.S_select</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>select</servlet-name>
+  	<url-pattern>/Servlet/S_select</url-pattern>
+  	 </servlet-mapping>
+  	 
+  	 <servlet>
+  	<servlet-name>buy</servlet-name>
+  	<servlet-class>Servlet.S_buy</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>buy</servlet-name>
+  	<url-pattern>/Servlet/S_buy</url-pattern>
+  	 </servlet-mapping>
+  	 
+  	   	 <servlet>
+  	<servlet-name>order</servlet-name>
+  	<servlet-class>Servlet.S_order</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>order</servlet-name>
+  	<url-pattern>/Servlet/S_order</url-pattern>
+  	 </servlet-mapping>
+  	  	 
+  	   	 <servlet>
+  	<servlet-name>trans</servlet-name>
+  	<servlet-class>Servlet.S_trans</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>trans</servlet-name>
+  	<url-pattern>/Servlet/S_trans</url-pattern>
+  	 </servlet-mapping>
+  	 
+  <servlet>
+  	<servlet-name>transbuy</servlet-name>
+  	<servlet-class>Servlet.S_transbuy</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>transbuy</servlet-name>
+  	<url-pattern>/Servlet/S_transbuy</url-pattern>
+  	 </servlet-mapping>
+  	 
+  	   <servlet>
+  	<servlet-name>tranorder</servlet-name>
+  	<servlet-class>Servlet.S_tranorder</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>tranorder</servlet-name>
+  	<url-pattern>/Servlet/S_tranorder</url-pattern>
+  	 </servlet-mapping>
+  	    <servlet>
+  	<servlet-name>myorder</servlet-name>
+  	<servlet-class>Servlet.S_myorder</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>myorder</servlet-name>
+  	<url-pattern>/Servlet/S_myorder</url-pattern>
+  	 </servlet-mapping>
+  	 
+  	  	    <servlet>
+  	<servlet-name>tuipiao</servlet-name>
+  	<servlet-class>Servlet.S_tuipiao</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>tuipiao</servlet-name>
+  	<url-pattern>/Servlet/S_tuipiao</url-pattern>
+  	 </servlet-mapping>
+  	 
+  	   	  	    <servlet>
+  	<servlet-name>gaiqian</servlet-name>
+  	<servlet-class>Servlet.S_gaiqian</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>gaiqian</servlet-name>
+  	<url-pattern>/Servlet/S_gaiqian</url-pattern>
+  	 </servlet-mapping>
+  	 
+  	  <servlet>
+  	   	<servlet-name>gaiqianbuy</servlet-name>
+  	<servlet-class>Servlet.S_gaiqianbuy</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>gaiqianbuy</servlet-name>
+  	<url-pattern>/Servlet/S_gaiqianbuy</url-pattern>
+  	 </servlet-mapping>
+</web-app>
